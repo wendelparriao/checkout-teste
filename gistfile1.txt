@@ -195,30 +195,24 @@ input[type="submit"]:hover{
   float: right;
 }
 
+form:not([novalidate]) input:required, form:not([novalidate]) textarea:required {
+    background: rgba(193, 193, 193, 0.16);
+}
+form:not([novalidate]) input:required:valid, form:not([novalidate]) textarea:required:valid {
+        /*border: 5px solid green;*/
+}
+form:not([novalidate]) input:not(:focus):valid, form:not([novalidate]) textarea:not(:focus):valid {
+    box-shadow: none;
+    border: 1px solid #d2d2d2
+}
+form:not([novalidate]) input:focus:invalid,form:not([novalidate]) textarea:focus:invalid {
+    /*border: 5px solid red;*/
+}
 
 form:not([novalidate]) .input-validate-error {
-    border: 3px solid #c12d2d;
+    box-shadow: 0px 0px 5px 2px red;
 }
 
-::-webkit-input-placeholder {
-   color: #3C8DC5;
-}
-
-:-moz-placeholder { /* Firefox 18- */
-   color: #3C8DC5;  
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-   color: #3C8DC5;  
-}
-
-:-ms-input-placeholder {  
-   color: #3C8DC5;  
-}
-
-form:not([novalidate]) .input-validate-true {
-    border: 3px solid green;
-}
 
 @media only screen and (min-width: 300px) and (max-width: 400px){
   .personal-information {
